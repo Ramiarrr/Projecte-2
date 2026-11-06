@@ -9,4 +9,6 @@
 
 - El segon training ja fem diferets exercicis, pel primer creem un _float_ (costat) i pregunter el costat d'un quadrat per multiplicar costat per costat amb el resultat de l'àrea.
 
-- Exercici 2 training 2, 
+- Exercici 2 training 2, fem una mini calculadora on creem num1 i 2 i després decidim si volem que sigui una suma, resta, multiplicació o divisio, per a que el programa reconeixi una suma l'exemple és _suma = num1 +num2_ i així canviant si volem fer una altra cosa i com no és pot dividir entre 0 li fiquem un _else_ per a que enviï un missatge d'error explicant que no es pot dividir entre 0.
+
+-
