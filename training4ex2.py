@@ -7,4 +7,4 @@ while True:
     if nota == 10:
         hi_ha_deu = True
 if hi_ha_deu:
-    print("Hi ha ha de")
+    print("Hi ha ha 10")
