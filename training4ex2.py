@@ -7,4 +7,6 @@ while True:
     if nota == 10:
         hi_ha_deu = True
 if hi_ha_deu:
-    print("Hi ha ha 10")
+    print("Hi ha hagut alguna nota que té un 10")
+else:
+    print("No hi ha cap 10")
