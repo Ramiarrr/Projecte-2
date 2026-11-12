@@ -1,10 +1,18 @@
+# ==============================================================================
+# ACTIVITAT PRÀCTICA: FUNCIONS EN PYTHON - GESTIÓ D'UN SERVEI TÈCNIC INFORMÀTIC
+# Cicle Formatiu: 2n de Sistemes Microinformàtics i Xarxes (SMX)
+# ==============================================================================
+# ------------------------------------------------------------------------------
 # EXERCICI 1. Calculadora de preus
+# ------------------------------------------------------------------------------
 def calcular_preu(preu_peces, ma_obra):
     """Calcula i retorna el cost total d'una reparació."""
     total = preu_peces + ma_obra
     return total
+
+
 # Prova de l'Exercici 1
-print("PROVA EXERCICI 1")
+print("--- PROVA EXERCICI 1 ---")
 preu = calcular_preu(45, 30)
 print("Cost total:", preu, "€")
 
@@ -20,7 +28,11 @@ print("Cost total:", preu, "€")
 #    La funció retornaria 'None' per defecte. La variable 'preu' emmagatzemaria
 #    'None' i per pantalla es mostraria "Cost total: None €", sense poder fer
 #    servir el resultat en càlculs posteriors.
+
+
+# ------------------------------------------------------------------------------
 # EXERCICI 2. Funcions amb condicions
+# ------------------------------------------------------------------------------
 def aplicar_descompte(preu, tipus_client):
     """
     Aplica un descompte segons el tipus de client i retorna el preu final.
@@ -28,6 +40,7 @@ def aplicar_descompte(preu, tipus_client):
     majúscules o amb inicial majúscula (ex: 'Empresa', 'empresa', 'EMPRESA').
     """
     tipus_normalitzat = tipus_client.strip().lower()
+
     if tipus_normalitzat == "particular":
         descompte = 0.0
     elif tipus_normalitzat == "empresa":
@@ -37,18 +50,27 @@ def aplicar_descompte(preu, tipus_client):
     else:
         print(f"Error: El tipus de client '{tipus_client}' no és vàlid. No s'aplica descompte.")
         return preu
+
     preu_final = preu - (preu * descompte)
     return preu_final
+
+
 # Proves de l'Exercici 2 amb els 3 tipus vàlids i un d'incorrecte
 print("\n--- PROVES EXERCICI 2 ---")
 print("Particular (100 €):", aplicar_descompte(100, "Particular"), "€")
 print("Empresa (100 €):", aplicar_descompte(100, "empresa"), "€")
 print("Client habitual (100 €):", aplicar_descompte(100, "CLIENT HABITUAL"), "€")
 print("Tipus incorrecte (100 €):", aplicar_descompte(100, "VIP"), "€")
+
+
+# ------------------------------------------------------------------------------
 # EXERCICI 3. Funcions que criden altres funcions
+# ------------------------------------------------------------------------------
 def calcular_iva(preu):
     """Calcula i retorna únicament l'import del 21% d'IVA sobre un import."""
     return preu * 0.21
+
+
 def calcular_factura(preu, tipus_client):
     """
     Calcula el total d'una factura reutilitzant les funcions anteriors:
@@ -59,11 +81,15 @@ def calcular_factura(preu, tipus_client):
     total_factura = preu_amb_descompte + import_iva
     return total_factura
 
+
 # Prova de l'Exercici 3
 print("\n--- PROVA EXERCICI 3 ---")
 print("Factura Empresa (100 € base):", round(calcular_factura(100, "Empresa"), 2), "€")
 
+
+# ------------------------------------------------------------------------------
 # EXERCICI 4. Programa complet: servei tècnic (i Ampliació opcional)
+# ------------------------------------------------------------------------------
 def mostrar_menu():
     """Mostra per pantalla les opcions del menú del servei tècnic."""
     print("\n===== SERVEI TÈCNIC INFORMÀTIC =====")
@@ -71,6 +97,8 @@ def mostrar_menu():
     print("2. Consultar el nombre de reparacions")
     print("3. Consultar la facturació acumulada")
     print("4. Sortir")
+
+
 def mostrar_factura(nom_client, preu_inicial, descompte_aplicat, iva, total):
     """Imprimeix el resum detallat de la factura d'una reparació."""
     print("\n---------- FACTURA ----------")
@@ -80,6 +108,8 @@ def mostrar_factura(nom_client, preu_inicial, descompte_aplicat, iva, total):
     print(f"IVA (21%):         +{iva:.2f} €")
     print(f"TOTAL A PAGAR:     {total:.2f} €")
     print("-----------------------------\n")
+
+
 def processar_nova_reparacio():
     """
     Demana les dades d'una reparació, calcula la factura mitjançant les
@@ -99,10 +129,13 @@ def processar_nova_reparacio():
 
     mostrar_factura(nom_client, preu_inicial, descompte_aplicat, iva, total_pagar)
     return total_pagar
+
+
 def executar_programa():
     """Funció principal que controla el bucle del menú del servei tècnic."""
     num_reparacions = 0
     facturacio_acumulada = 0.0
+
     while True:
         mostrar_menu()
         opcio = input("Selecciona una opció: ").strip()
@@ -124,11 +157,15 @@ def executar_programa():
         else:
             print("\nOpció no vàlida. Si us plau, tria una opció entre 1 i 4.")
 
+
 # Inici del programa principal
 if __name__ == "__main__":
     executar_programa()
 
+
+# ------------------------------------------------------------------------------
 # EXERCICI 5. Reflexió final
+# ------------------------------------------------------------------------------
 # 4. Quina diferència hi ha entre print() i return?
 #    print() únicament mostra un text o valor per la consola perquè el vegi
 #    l'usuari, però aquest valor es perd. En canvi, return envia el resultat
