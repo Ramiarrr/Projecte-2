@@ -30,7 +30,7 @@ def calcular_factura(preu, tipus_client):
     return preu_descompte + iva
 print(calcular_factura(100, "empresa"))
 def mostrar_menu():
-    print("\n===== SERVEI TÈCNIC INFORMÀTIC =====")
+    print("\n     SERVEI TÈCNIC INFORMÀTIC     ")
     print("1. Introduir una nova reparació")
     print("2. Consultar el nombre de reparacions")
     print("3. Consultar la facturació acumulada")
@@ -90,7 +90,7 @@ def main():
         elif opcio == "3":
             print(f"Facturació acumulada: {facturacio_total:.2f} €")
         elif opcio == "4":
-            print("Fins aviat!")
+            print("Hasta la pròxima")
             opcio = 4
         else:
             print("Opció no vàlida.")
@@ -119,7 +119,7 @@ def main():
             print("Opció no vàlida.")
 main()
 
-# ===== EXERCICI 5: Reflexió final =====
+#      EXERCICI 5: Reflexió final
 # 4. print() mostra informació per pantalla; return envia un valor a qui ha
 #    cridat la funció (es pot guardar i reutilitzar) i acaba la funció.
 # 5. Perquè el codi queda més ordenat, llegible, fàcil de provar i de
