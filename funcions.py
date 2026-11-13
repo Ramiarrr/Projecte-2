@@ -1,10 +1,6 @@
-# ==============================================================================
 # ACTIVITAT PRÀCTICA: FUNCIONS EN PYTHON - GESTIÓ D'UN SERVEI TÈCNIC INFORMÀTIC
 # Cicle Formatiu: 2n de Sistemes Microinformàtics i Xarxes (SMX)
-# ==============================================================================
-# ------------------------------------------------------------------------------
 # EXERCICI 1. Calculadora de preus
-# ------------------------------------------------------------------------------
 def calcular_preu(preu_peces, ma_obra):
     """Calcula i retorna el cost total d'una reparació."""
     total = preu_peces + ma_obra
@@ -20,9 +16,7 @@ print("Cost total:", preu, "€")
 #    Retorna la suma total de les peces més la mà d'obra (en el print de prova surt 75).
 # 3. Què passaria si eliminéssim el return?
 #    Doncs que la variable 'preu' es quedaria a None i no podria fer bé els càlculs, per pantalla sortiria "Cost total: None €".
-# ------------------------------------------------------------------------------
 # EXERCICI 2. Funcions amb condicions
-# ------------------------------------------------------------------------------
 def aplicar_descompte(preu, tipus_client):
     """
     Aplica un descompte segons el tipus de client i retorna el preu final.
