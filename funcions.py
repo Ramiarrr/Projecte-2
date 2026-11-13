@@ -6,7 +6,7 @@ def calcular_preu(preu_peces, ma_obra):
     total = preu_peces + ma_obra
     return total
 # Prova de l'Exercici 1
-print("--- PROVA EXERCICI 1 ---")
+print("PROVA EXERCICI 1")
 preu = calcular_preu(45, 30)
 print("Cost total:", preu, "€")
 # Respostes a les preguntes de l'Exercici 1:
@@ -36,7 +36,7 @@ def aplicar_descompte(preu, tipus_client):
     preu_final = preu - (preu * descompte)
     return preu_final
 # Proves de l'Exercici 2 amb els 3 tipus vàlids i un d'incorrecte
-print("\n--- PROVES EXERCICI 2 ---")
+print("\nPROVES EXERCICI 2")
 print("Particular (100 €):", aplicar_descompte(100, "Particular"), "€")
 print("Empresa (100 €):", aplicar_descompte(100, "empresa"), "€")
 print("Client habitual (100 €):", aplicar_descompte(100, "CLIENT HABITUAL"), "€")
@@ -57,21 +57,21 @@ def calcular_factura(preu, tipus_client):
     total_factura = preu_amb_descompte + import_iva
     return total_factura
 # Prova de l'Exercici 3
-print("\n--- PROVA EXERCICI 3 ---")
+print("\nPROVA EXERCICI 3")
 print("Factura Empresa (100 € base):", round(calcular_factura(100, "Empresa"), 2), "€")
 # ------------------------------------------------------------------------------
 # EXERCICI 4. Programa complet: servei tècnic (i Ampliació opcional)
 # ------------------------------------------------------------------------------
 def mostrar_menu():
     """Mostra per pantalla les opcions del menú del servei tècnic."""
-    print("\n===== SERVEI TÈCNIC INFORMÀTIC =====")
+    print("\nSERVEI TÈCNIC INFORMÀTIC")
     print("1. Introduir una nova reparació")
     print("2. Consultar el nombre de reparacions")
     print("3. Consultar la facturació acumulada")
     print("4. Sortir")
 def mostrar_factura(nom_client, preu_inicial, descompte_aplicat, iva, total):
     """Imprimeix el resum detallat de la factura d'una reparació."""
-    print("\n---------- FACTURA ----------")
+    print("\nFACTURA")
     print(f"Client:             {nom_client}")
     print(f"Preu inicial:       {preu_inicial:.2f} €")
     print(f"Descompte aplicat: -{descompte_aplicat:.2f} €")
