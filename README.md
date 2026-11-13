@@ -14,3 +14,29 @@
 - Exercici 3, training 2, en aquest exercici formem una frase creant tres valors on pregunten quina paraula volem ficar i la frase final és la suma de les tres paraules.
 
 - Exercici 4, training 2,
+
+- Respostes a les preguntes de l'Exercici 1:
+1. Quants paràmetres té la funció?
+Té dos: preu_peces i ma_obra.
+
+2. Quin valor retorna?
+Retorna la suma total de les peces més la mà d'obra (en el print de prova surt 75).
+3. Què passaria si eliminéssim el return?
+ Doncs que la variable 'preu' es quedaria a None i no podria fer bé els càlculs, per pantalla sortiria "Cost total: None €".
+
+- Respostes a les preguntes de l'Exercici 5
+
+4. Quina diferència hi ha entre print() i return?
+El print només serveix perquè l'usuari vegi el text per la consola, però el valor es perd. En canvi, el return guarda el resultat perquè el puguem fer servir en altres operacions.
+
+5. Per què és millor dividir un programa en funcions?
+Perquè queda molt més net i organitzat, i si hi ha algun fallo el trobes de seguida sense haver de mirar tot el bloc de cop.
+
+6. Què és un paràmetre?
+És la variable que posem dins dels parèntesis al crear la funció (def) per rebre dades de fora.
+
+7. Què és una variable local?
+Una variable que només viu dins de la funció on la declarem; quan acaba la funció, s'esborra de la memòria.
+
+8. Quins avantatges té reutilitzar una funció?
+T'estalvia escriure codi repetit moltes vegades i si has de canviar alguna cosa (com un percentatge), només ho has de tocar en un lloc.
